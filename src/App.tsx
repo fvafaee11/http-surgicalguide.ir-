@@ -1,48 +1,81 @@
-﻿import './App.css'
+import './App.css'
 
-const WHATSAPP_URL = 'https://wa.me/971507133095?text=Hello%2C%20I%20want%20a%20surgical%20guide%20design%20for%20my%20case.'
+const WHATSAPP_URL =
+  'https://wa.me/971507133095?text=Hello%2C%20I%20want%20a%20surgical%20guide%20design%20for%20my%20case.'
 const TELEGRAM_URL = 'https://t.me/yourhandle'
 
 const proofPoints = [
+  { value: '8+', label: 'real case photos in the gallery' },
   { value: '24h', label: 'design response target' },
-  { value: '3D', label: 'guided planning from scan to drill' },
-  { value: 'Fast', label: 'built with zero heavy animation libraries' },
+  { value: 'exocad', label: 'workflow-ready planning visuals' },
 ]
 
-const guideStages = [
+const galleryItems = [
   {
-    title: 'Case intake',
-    description: 'Receive the scan, implant plan, and restorative target in a clean, review-ready workflow.',
+    src: '/showcase/guide-04.jpg',
+    title: 'Drill-through guide',
+    caption: 'Surgical guide in use with handpiece alignment.',
+    size: 'tall',
   },
   {
-    title: 'Guide design',
-    description: 'Shape a precise surgical guide with sleeve positions, support strategy, and visibility for the surgeon.',
+    src: '/showcase/planning-05.jpg',
+    title: 'Planning overview',
+    caption: 'CT, guide paths, and implant position planning.',
+    size: 'wide',
   },
   {
-    title: 'Delivery',
-    description: 'Export a production-ready design package and route design-service requests to chat instantly.',
+    src: '/showcase/guide-01.jpg',
+    title: 'Guide body',
+    caption: 'Clear sleeve window and white resin guide shell.',
+    size: 'normal',
+  },
+  {
+    src: '/showcase/guide-02.jpg',
+    title: 'Multi-sleeve guide',
+    caption: 'Precision sleeve layout for guided placement.',
+    size: 'normal',
+  },
+  {
+    src: '/showcase/guide-03.jpg',
+    title: 'Full-arch support',
+    caption: 'Arch-based guide with fixation and stabilization.',
+    size: 'wide',
+  },
+  {
+    src: '/showcase/guide-06.jpg',
+    title: 'Intraoral view',
+    caption: 'Full-mouth surgical guide seated for live use.',
+    size: 'tall',
+  },
+  {
+    src: '/showcase/planning-07.jpg',
+    title: '3D guided pathway',
+    caption: 'Digital drill path and guide geometry view.',
+    size: 'normal',
+  },
+  {
+    src: '/showcase/guide-08.jpg',
+    title: 'U-shaped guide',
+    caption: 'Open arch format for posterior access and stability.',
+    size: 'normal',
   },
 ]
 
-const advantages = [
-  'Precision-focused surgical guides for digital dentistry',
-  'Compatible with modern implant planning workflows',
-  'Clear communication for clinics and lab teams',
-  'Design service handoff through WhatsApp or Telegram',
-]
-
-const offerings = [
+const workflowCards = [
   {
-    title: 'Guides for single and full-arch cases',
-    body: 'From straightforward posterior placement to more complex full-arch workflows, the presentation stays clinical and clear.',
+    src: '/showcase/exocad-studio.svg',
+    title: 'exocad planning panel',
+    body: 'Show exocad-style surgical workflow, model setup, and guide export with a clean studio look.',
   },
   {
-    title: 'Production-ready visual system',
-    body: 'Modern layouts, crisp typography, and responsive sections make the offer feel premium on desktop and mobile.',
+    src: '/showcase/3shape-workflow.svg',
+    title: '3Shape workflow board',
+    body: 'Present planning, implant path, and design review in a polished 3Shape-inspired layout.',
   },
   {
-    title: 'Lead handoff built in',
-    body: 'When a visitor asks for design service, the page routes them directly to WhatsApp or Telegram.',
+    src: '/showcase/implant-guide.svg',
+    title: 'Finished surgical guide',
+    body: 'Highlight the final printable guide with a premium render that feels showroom-ready.',
   },
 ]
 
@@ -63,8 +96,8 @@ function App() {
           </a>
         </div>
         <nav className="topnav" aria-label="Primary">
-          <a href="#guides">Guides</a>
-          <a href="#process">Process</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#workflow">Workflow</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
@@ -75,42 +108,42 @@ function App() {
             <div className="hero-kicker">Made for digital dentistry teams</div>
             <h1>Modern surgical guides for confident implant placement.</h1>
             <p className="hero-text">
-              Show your surgical guide service with a premium, animated landing page built for speed,
-              clarity, and lead conversion. Visitors can review the service, then reach your design team
-              through WhatsApp or Telegram in one tap.
+              Show your surgical guide service with a premium, image-led landing page built for speed,
+              clarity, and lead conversion. Visitors can review real guide cases, exocad-style planning,
+              and 3Shape workflow visuals before reaching your design team in one tap.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#contact">
                 Request design service
               </a>
-              <a className="button button-secondary" href="#guides">
-                See what we make
+              <a className="button button-secondary" href="#gallery">
+                See the photo gallery
               </a>
             </div>
             <ul className="hero-pills" aria-label="Highlights">
-              {advantages.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
+              <li>Precision-focused surgical guides</li>
+              <li>Real case photos and workflow imagery</li>
+              <li>Compatible with exocad and 3Shape style planning</li>
+              <li>Direct chat handoff for design service</li>
             </ul>
           </div>
 
-          <aside className="hero-panel" aria-label="Service snapshot">
-            <div className="panel-card panel-card-large">
-              <span className="panel-label">Service snapshot</span>
-              <strong>Guided design workflow</strong>
-              <p>
-                Implant planning, sleeve mapping, and production-ready export packaging in one fast
-                presentation.
-              </p>
+          <aside className="hero-visual" aria-label="Featured guide preview">
+            <div className="hero-shot hero-shot-main">
+              <img src="/showcase/guide-04.jpg" alt="Dental implant surgical guide with handpiece drilling through a sleeve" />
+              <div className="hero-shot-overlay">
+                <span className="panel-label">featured case</span>
+                <strong>Guided drilling in action</strong>
+                <p>Single case, clean sleeve access, and precise placement.</p>
+              </div>
             </div>
-
-            <div className="panel-grid">
-              {proofPoints.map((point) => (
-                <div className="panel-card" key={point.label}>
-                  <strong>{point.value}</strong>
-                  <span>{point.label}</span>
-                </div>
-              ))}
+            <div className="hero-shot-grid">
+              <div className="hero-shot hero-shot-small">
+                <img src="/showcase/guide-03.jpg" alt="Full-arch surgical guide with fixation hardware" />
+              </div>
+              <div className="hero-shot hero-shot-small">
+                <img src="/showcase/guide-05.jpg" alt="Implant planning screen showing guide and CT slices" />
+              </div>
             </div>
           </aside>
         </section>
@@ -124,21 +157,24 @@ function App() {
           ))}
         </section>
 
-        <section id="guides" className="section content-grid reveal">
+        <section id="gallery" className="section gallery-section reveal">
           <div className="section-heading">
-            <p className="eyebrow">What you showcase</p>
-            <h2>Surgical guide services presented like a premium product.</h2>
+            <p className="eyebrow">Case gallery</p>
+            <h2>Use real-looking dental implant guide photos, not empty placeholders.</h2>
             <p>
-              Keep the experience focused on value: precision, collaboration, and a frictionless path to
-              contact your design team.
+              This gallery combines surgical guides, live drilling views, CT planning, and digital workflow
+              images so the page feels much more credible and much less flat.
             </p>
           </div>
 
-          <div className="cards-grid">
-            {offerings.map((item) => (
-              <article className="info-card" key={item.title}>
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
+          <div className="gallery-grid">
+            {galleryItems.map((item) => (
+              <article className={`gallery-card gallery-card--${item.size}`} key={item.title}>
+                <img src={item.src} alt={item.title} loading="lazy" />
+                <div className="gallery-card-copy">
+                  <span className="panel-label">{item.title}</span>
+                  <p>{item.caption}</p>
+                </div>
               </article>
             ))}
           </div>
@@ -159,8 +195,8 @@ function App() {
               <article className="stack-item">
                 <span className="stack-index">02</span>
                 <div>
-                  <h3>Responsive motion</h3>
-                  <p>Subtle gradients, floating shapes, and staggered reveals keep the page alive.</p>
+                  <h3>Real case imagery</h3>
+                  <p>Show actual guide photos, drill-through views, and planning screenshots.</p>
                 </div>
               </article>
               <article className="stack-item">
@@ -173,20 +209,18 @@ function App() {
             </div>
           </div>
 
-          <div className="process-panel" id="process">
+          <div className="process-panel" id="workflow">
             <p className="eyebrow">Workflow</p>
             <h2>How the service flow reads.</h2>
-            <ol className="timeline">
-              {guideStages.map((stage, index) => (
-                <li key={stage.title}>
-                  <span className="timeline-step">0{index + 1}</span>
-                  <div>
-                    <h3>{stage.title}</h3>
-                    <p>{stage.description}</p>
-                  </div>
-                </li>
+            <div className="workflow-grid">
+              {workflowCards.map((card) => (
+                <article className="workflow-card" key={card.title}>
+                  <img src={card.src} alt={card.title} loading="lazy" />
+                  <h3>{card.title}</h3>
+                  <p>{card.body}</p>
+                </article>
               ))}
-            </ol>
+            </div>
           </div>
         </section>
       </main>
@@ -196,8 +230,8 @@ function App() {
           <p className="eyebrow">Design service inquiries</p>
           <h2>Forward visitors to your chat channels instantly.</h2>
           <p>
-            Replace the placeholder links in the code with your real WhatsApp number and Telegram handle,
-            and the buttons will become the fastest route to your design team.
+            Replace the placeholder Telegram handle in the code when you are ready, and the buttons will
+            become the fastest route to your design team.
           </p>
         </div>
         <div className="contact-actions">
@@ -219,4 +253,3 @@ function App() {
 }
 
 export default App
-
