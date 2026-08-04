@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="CAD workstation">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4c1d95"/><stop offset="100%" stop-color="#0f172a"/></linearGradient></defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <rect x="95" y="175" width="210" height="18" rx="3" fill="#334155"/>
+  <rect x="120" y="193" width="12" height="50" fill="#475569"/>
+  <rect x="268" y="193" width="12" height="50" fill="#475569"/>
+  <rect x="130" y="85" width="140" height="95" rx="6" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+  <rect x="140" y="95" width="120" height="75" rx="4" fill="#0ea5e9" opacity=".35"/>
+  <path d="M150 130 L190 110 L230 135 L210 155 Z" fill="#38bdf8" opacity=".8"/>
+  <rect x="285" y="100" width="55" height="70" rx="5" fill="#1e293b" stroke="#64748b"/>
+</svg>

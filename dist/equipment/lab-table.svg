@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Lab table">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#44403c"/><stop offset="100%" stop-color="#1c1917"/></linearGradient></defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <rect x="50" y="115" width="300" height="22" rx="3" fill="#e7e5e4" stroke="#a8a29e"/>
+  <rect x="70" y="137" width="14" height="105" fill="#57534e"/>
+  <rect x="316" y="137" width="14" height="105" fill="#57534e"/>
+  <circle cx="350" cy="125" r="14" fill="#94a3b8" stroke="#64748b" stroke-width="2"/>
+</svg>

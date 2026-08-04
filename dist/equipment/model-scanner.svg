@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Model scanner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#5b21b6"/><stop offset="100%" stop-color="#1e1b4b"/></linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c4b5fd" stop-opacity=".9"/><stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <path d="M130 80 L270 80 L250 200 L150 200 Z" fill="#312e81" stroke="#a78bfa" stroke-width="2"/>
+  <polygon points="200,210 120,240 280,240" fill="url(#beam)"/>
+  <ellipse cx="200" cy="248" rx="70" ry="18" fill="#ddd6fe" opacity=".5"/>
+  <rect x="165" y="55" width="70" height="30" rx="6" fill="#1e1b4b" stroke="#a78bfa"/>
+  <circle cx="200" cy="70" r="8" fill="#22d3ee"/>
+</svg>

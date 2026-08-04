@@ -1,5 +1,6 @@
----
+﻿---
 deployment:
   tasks:
     - export DEPLOYPATH=/home/jgopnshi/public_html
-    - /bin/cp -a public/. "$DEPLOYPATH"
+    - /bin/rm -f "$DEPLOYPATH/index.php"
+    - /bin/cp -a dist/. "$DEPLOYPATH"
