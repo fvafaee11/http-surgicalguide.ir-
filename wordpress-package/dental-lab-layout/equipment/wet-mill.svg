@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Wet milling machine">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1e40af"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e2e8f0"/><stop offset="100%" stop-color="#94a3b8"/></linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7dd3fc" stop-opacity=".9"/><stop offset="100%" stop-color="#0369a1" stop-opacity=".6"/></linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <ellipse cx="200" cy="268" rx="140" ry="18" fill="#000" opacity=".25"/>
+  <rect x="70" y="95" width="260" height="150" rx="12" fill="url(#body)" stroke="#475569" stroke-width="2"/>
+  <rect x="95" y="115" width="90" height="55" rx="6" fill="url(#glass)"/>
+  <rect x="210" y="120" width="95" height="45" rx="4" fill="#1e293b"/>
+  <circle cx="257" cy="142" r="8" fill="#22c55e"/>
+  <rect x="120" y="175" width="160" height="55" rx="6" fill="#cbd5e1"/>
+  <rect x="185" y="88" width="30" height="22" rx="4" fill="#64748b"/>
+  <circle cx="200" cy="78" r="10" fill="#f8fafc"/>
+</svg>

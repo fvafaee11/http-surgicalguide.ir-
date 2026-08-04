@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Technician chair">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#475569"/><stop offset="100%" stop-color="#1e293b"/></linearGradient></defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <ellipse cx="200" cy="255" rx="80" ry="12" fill="#000" opacity=".2"/>
+  <rect x="185" y="130" width="30" height="110" rx="8" fill="#64748b"/>
+  <ellipse cx="200" cy="245" rx="95" ry="14" fill="#334155" stroke="#94a3b8" stroke-width="3"/>
+  <circle cx="200" cy="245" r="8" fill="#0ea5e9"/>
+  <rect x="155" y="85" width="90" height="55" rx="22" fill="#1e293b"/>
+  <rect x="165" y="95" width="70" height="40" rx="16" fill="#334155"/>
+  <rect x="175" y="55" width="50" height="35" rx="12" fill="#475569"/>
+</svg>

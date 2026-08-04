@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Storage cabinet">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#64748b"/><stop offset="100%" stop-color="#334155"/></linearGradient></defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <rect x="120" y="55" width="160" height="210" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="200" y1="55" x2="200" y2="265" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="130" y="75" width="60" height="55" rx="3" fill="#e2e8f0"/>
+  <rect x="210" y="75" width="60" height="55" rx="3" fill="#e2e8f0"/>
+  <rect x="130" y="145" width="60" height="55" rx="3" fill="#e2e8f0"/>
+  <rect x="210" y="145" width="60" height="55" rx="3" fill="#e2e8f0"/>
+  <circle cx="175" cy="102" r="4" fill="#64748b"/>
+  <circle cx="255" cy="102" r="4" fill="#64748b"/>
+</svg>

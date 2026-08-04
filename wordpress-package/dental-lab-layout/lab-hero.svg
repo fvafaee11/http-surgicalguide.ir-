@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0c4a6e"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#020617"/></linearGradient>
+  </defs>
+  <rect width="1200" height="320" fill="url(#sky)"/>
+  <rect y="200" width="1200" height="120" fill="url(#floor)"/>
+  <rect x="80" y="120" width="180" height="100" rx="6" fill="#334155" opacity=".9"/>
+  <rect x="300" y="100" width="140" height="120" rx="8" fill="#1e40af" opacity=".85"/>
+  <rect x="480" y="130" width="100" height="90" rx="6" fill="#7f1d1d" opacity=".9"/>
+  <rect x="620" y="110" width="160" height="110" rx="6" fill="#475569"/>
+  <rect x="820" y="125" width="120" height="95" rx="6" fill="#5b21b6" opacity=".8"/>
+  <rect x="980" y="140" width="140" height="80" rx="6" fill="#0f766e" opacity=".85"/>
+  <circle cx="200" cy="80" r="40" fill="#38bdf8" opacity=".15"/>
+  <circle cx="900" cy="60" r="55" fill="#0ea5e9" opacity=".12"/>
+  <text x="600" y="55" text-anchor="middle" fill="#e0f2fe" font-family="system-ui,sans-serif" font-size="28" font-weight="600" opacity=".9">Dental Laboratory Planning</text>
+</svg>

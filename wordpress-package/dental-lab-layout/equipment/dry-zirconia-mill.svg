@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Dry zirconia mill">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1d4ed8"/><stop offset="100%" stop-color="#0c4a6e"/></linearGradient>
+    <linearGradient id="cab" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f8fafc"/><stop offset="100%" stop-color="#cbd5e1"/></linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <ellipse cx="200" cy="270" rx="130" ry="16" fill="#000" opacity=".2"/>
+  <rect x="90" y="100" width="220" height="145" rx="14" fill="url(#cab)" stroke="#64748b" stroke-width="2"/>
+  <rect x="115" y="125" width="170" height="70" rx="8" fill="#0f172a" opacity=".85"/>
+  <rect x="130" y="140" width="50" height="40" rx="4" fill="#38bdf8" opacity=".5"/>
+  <circle cx="265" cy="160" r="22" fill="#e2e8f0" stroke="#475569" stroke-width="3"/>
+  <circle cx="265" cy="160" r="8" fill="#334155"/>
+  <text x="200" y="248" text-anchor="middle" fill="#bae6fd" font-family="system-ui,sans-serif" font-size="14" font-weight="600">DRY MILL</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Porcelain furnace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#b91c1c"/><stop offset="100%" stop-color="#44403c"/></linearGradient>
+    <radialGradient id="heat" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#fef9c3"/><stop offset="100%" stop-color="#f97316"/></radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <rect x="120" y="90" width="160" height="160" rx="20" fill="#fafaf9" stroke="#a8a29e" stroke-width="2"/>
+  <circle cx="200" cy="165" r="55" fill="url(#heat)"/>
+  <rect x="175" y="55" width="50" height="40" rx="8" fill="#d6d3d1"/>
+  <rect x="145" y="235" width="110" height="12" rx="4" fill="#78716c"/>
+</svg>
