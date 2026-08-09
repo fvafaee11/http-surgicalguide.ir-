@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import InteractiveCube from './components/InteractiveCube'
 
 const WHATSAPP_URL =
   'https://wa.me/971507133095?text=Hello%2C%20I%20want%20a%20surgical%20guide%20design%20for%20my%20case.'
@@ -163,24 +164,7 @@ function App() {
             </ul>
           </div>
 
-          <aside className="hero-visual" aria-label="Featured guide preview">
-            <div className="hero-shot hero-shot-main">
-              <img src="/showcase/guide-04.jpg" alt="Dental implant surgical guide with handpiece drilling through a sleeve" />
-              <div className="hero-shot-overlay">
-                <span className="panel-label">featured case</span>
-                <strong>Guided drilling in action</strong>
-                <p>Single case, clean sleeve access, and precise placement.</p>
-              </div>
-            </div>
-            <div className="hero-shot-grid">
-              <div className="hero-shot hero-shot-small">
-                <img src="/showcase/guide-03.jpg" alt="Full-arch surgical guide with fixation hardware" />
-              </div>
-              <div className="hero-shot hero-shot-small">
-                <img src="/showcase/planning-07.jpg" alt="Implant planning screen showing guide and CT slices" />
-              </div>
-            </div>
-          </aside>
+          <InteractiveCube />
         </section>
 
         <section className="section metrics" data-reveal>
