@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react'
 import './App.css'
+import InteractiveCube from './components/InteractiveCube'
 
 const WHATSAPP_URL =
   'https://wa.me/971507133095?text=Hello%2C%20I%20want%20a%20surgical%20guide%20design%20for%20my%20case.'
@@ -80,8 +82,31 @@ const workflowCards = [
 ]
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const revealItems = document.querySelectorAll<HTMLElement>('[data-reveal]')
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.14, rootMargin: '0px 0px -48px' },
+    )
+
+    revealItems.forEach((item) => observer.observe(item))
+    return () => observer.disconnect()
+  }, [])
+
+  const closeMenu = () => setMenuOpen(false)
+
   return (
     <div className="site-shell">
+      <div className="scroll-progress" aria-hidden="true" />
       <div className="site-bg" aria-hidden="true">
         <span className="orb orb-a" />
         <span className="orb orb-b" />
@@ -95,18 +120,29 @@ function App() {
             Surgical Guides Studio
           </a>
         </div>
-        <nav className="topnav" aria-label="Primary">
-          <a href="#gallery">Gallery</a>
-          <a href="#workflow">Workflow</a>
-          <a href="#contact">Contact</a>
+        <button
+          className={`menu-toggle ${menuOpen ? 'is-open' : ''}`}
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+        </button>
+        <nav className={`topnav ${menuOpen ? 'is-open' : ''}`} aria-label="Primary">
+          <a href="#gallery" onClick={closeMenu}>Gallery</a>
+          <a href="#workflow" onClick={closeMenu}>Workflow</a>
+          <a href="#contact" onClick={closeMenu}>Contact</a>
+          <a className="nav-cta" href="#contact" onClick={closeMenu}>Start a case</a>
         </nav>
       </header>
 
       <main id="home">
-        <section className="hero section reveal">
+        <section className="hero section is-visible" data-reveal>
           <div className="hero-copy">
             <div className="hero-kicker">Made for digital dentistry teams</div>
-            <h1>Modern surgical guides for confident implant placement.</h1>
+            <h1>Modern surgical guides for <span>confident implant placement.</span></h1>
             <p className="hero-text">
               Show your surgical guide service with a premium, image-led landing page built for speed,
               clarity, and lead conversion. Visitors can review real guide cases, exocad-style planning,
@@ -128,36 +164,19 @@ function App() {
             </ul>
           </div>
 
-          <aside className="hero-visual" aria-label="Featured guide preview">
-            <div className="hero-shot hero-shot-main">
-              <img src="/showcase/guide-04.jpg" alt="Dental implant surgical guide with handpiece drilling through a sleeve" />
-              <div className="hero-shot-overlay">
-                <span className="panel-label">featured case</span>
-                <strong>Guided drilling in action</strong>
-                <p>Single case, clean sleeve access, and precise placement.</p>
-              </div>
-            </div>
-            <div className="hero-shot-grid">
-              <div className="hero-shot hero-shot-small">
-                <img src="/showcase/guide-03.jpg" alt="Full-arch surgical guide with fixation hardware" />
-              </div>
-              <div className="hero-shot hero-shot-small">
-                <img src="/showcase/guide-05.jpg" alt="Implant planning screen showing guide and CT slices" />
-              </div>
-            </div>
-          </aside>
+          <InteractiveCube />
         </section>
 
-        <section className="section metrics reveal">
-          {proofPoints.map((point) => (
-            <article className="metric-card" key={point.label}>
+        <section className="section metrics" data-reveal>
+          {proofPoints.map((point, index) => (
+            <article className="metric-card" key={point.label} style={{ '--delay': `${index * 90}ms` } as React.CSSProperties}>
               <strong>{point.value}</strong>
               <span>{point.label}</span>
             </article>
           ))}
         </section>
 
-        <section id="gallery" className="section gallery-section reveal">
+        <section id="gallery" className="section gallery-section" data-reveal>
           <div className="section-heading">
             <p className="eyebrow">Case gallery</p>
             <h2>Use real-looking dental implant guide photos, not empty placeholders.</h2>
@@ -168,8 +187,8 @@ function App() {
           </div>
 
           <div className="gallery-grid">
-            {galleryItems.map((item) => (
-              <article className={`gallery-card gallery-card--${item.size}`} key={item.title}>
+            {galleryItems.map((item, index) => (
+              <article className={`gallery-card gallery-card--${item.size}`} key={item.title} data-reveal style={{ '--delay': `${(index % 3) * 80}ms` } as React.CSSProperties}>
                 <img src={item.src} alt={item.title} loading="lazy" />
                 <div className="gallery-card-copy">
                   <span className="panel-label">{item.title}</span>
@@ -180,26 +199,26 @@ function App() {
           </div>
         </section>
 
-        <section className="section split reveal">
+        <section className="section split" data-reveal>
           <div className="feature-list">
             <p className="eyebrow">Why it works</p>
             <h2>Built for speed, trust, and conversion.</h2>
             <div className="stack">
-              <article className="stack-item">
+              <article className="stack-item" data-reveal>
                 <span className="stack-index">01</span>
                 <div>
                   <h3>Clinical-first message</h3>
                   <p>Speak to surgeons, dentists, and labs without clutter or sales noise.</p>
                 </div>
               </article>
-              <article className="stack-item">
+              <article className="stack-item" data-reveal>
                 <span className="stack-index">02</span>
                 <div>
                   <h3>Real case imagery</h3>
                   <p>Show actual guide photos, drill-through views, and planning screenshots.</p>
                 </div>
               </article>
-              <article className="stack-item">
+              <article className="stack-item" data-reveal>
                 <span className="stack-index">03</span>
                 <div>
                   <h3>Direct chat routing</h3>
@@ -213,8 +232,8 @@ function App() {
             <p className="eyebrow">Workflow</p>
             <h2>How the service flow reads.</h2>
             <div className="workflow-grid">
-              {workflowCards.map((card) => (
-                <article className="workflow-card" key={card.title}>
+              {workflowCards.map((card, index) => (
+                <article className="workflow-card" key={card.title} data-reveal style={{ '--delay': `${index * 90}ms` } as React.CSSProperties}>
                   <img src={card.src} alt={card.title} loading="lazy" />
                   <h3>{card.title}</h3>
                   <p>{card.body}</p>
@@ -225,7 +244,7 @@ function App() {
         </section>
       </main>
 
-      <section id="contact" className="section contact-band reveal">
+      <section id="contact" className="section contact-band" data-reveal>
         <div>
           <p className="eyebrow">Design service inquiries</p>
           <h2>Forward visitors to your chat channels instantly.</h2>
