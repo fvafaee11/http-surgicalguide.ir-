@@ -1,8 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronRight, ShieldCheck, Zap, Star } from 'lucide-react';
-import Navbar from './Navbar';
-import Gallery from './Gallery';
+import { ChevronRight } from 'lucide-react';
 
 const Hero = () => {
   return (
